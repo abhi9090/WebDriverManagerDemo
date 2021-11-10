@@ -13,9 +13,9 @@ public class WebDriverManagerPOC {
         options.addArguments("--disable-dev-shm-usage");
         options.addArguments("--window-size=1400,600");
         WebDriverManager.chromedriver().setup();
+        System.out.println(System.getProperty("webdriver.chrome.driver"));
         WebDriver driver = new ChromeDriver(options);
         driver.get("https://www.google.com");
-        System.out.println(System.getProperty("webdriver.chrome.driver"));
         driver.quit();
     }
 }
